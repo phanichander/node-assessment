@@ -1,0 +1,61 @@
+{
+  "name": "node-assessment",
+  "version": "1.0.0",
+  "description": "Project developed for student and teacher management using Nodejs and MySQL",
+  "main": "server.js",
+  "scripts": {
+    "coverage": "jest --coverage",
+    "start": "nodemon --exec babel-node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phanichander/node-assessment.git"
+  },
+  "author": "Phanichander Katakam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phanichander/node-assessment/issues"
+  },
+  "homepage": "https://github.com/phanichander/node-assessment#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.4.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "babel-jest": "^24.6.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.6.0",
+    "nodemon": "^1.18.10"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "modulePaths": [
+      "<rootDir>/"
+    ],
+    "setupFiles": [
+      "<rootDir>/__tests__/setup/setupEnzyme.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ]
+  }
+}
